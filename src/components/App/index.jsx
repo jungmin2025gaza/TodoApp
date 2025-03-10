@@ -9,7 +9,7 @@ import React, { useReducer, useRef, useCallback, useMemo } from "react";
 export const TodoStateContext = React.createContext();
 export const TodoDispatchContext = React.createContext();
 
-function reducer(state, action) {
+const  reducer = (state, action) => {
   switch (action.type) {
     case "CREATE": {
       return [...state, action.newItem];
@@ -32,7 +32,7 @@ function reducer(state, action) {
 
     default: return state;
   }
-}
+};
 
 const App = () => {
   const [todo, dispatch] = useReducer(reducer, mockTodo);
