@@ -1,0 +1,9 @@
+.Footer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.Footer .total_col {
+  flex: 1;
+}
